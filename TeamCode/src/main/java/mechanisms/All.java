@@ -8,6 +8,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 import org.firstinspires.ftc.robotcore.external.Telemetry;
+import org.firstinspires.ftc.robotcore.internal.hardware.android.DragonboardIndicatorLED;
 
 import java.lang.annotation.ElementType;
 
@@ -16,7 +17,6 @@ public class All {
     private Shooter shooter;
     private Transfer transfer;
     private ElapsedTime timer;
-
     public All(HardwareMap hardwareMap, Telemetry telemetry) {
         intake = new Intake(hardwareMap, telemetry);
         shooter = new Shooter(hardwareMap, telemetry);
@@ -39,7 +39,8 @@ public class All {
         while (timer.seconds() < 1) transfer.rest();
         timer.reset();
         timer.reset();
-        while (timer.seconds() < 0.11) {
+        shooter.outtakeAuto2();
+        while (timer.seconds() < 0.07) { //0.11
             transfer.outtake();
         }
         transfer.rest();
@@ -50,6 +51,7 @@ public class All {
         while (timer.seconds() < 0.76) transfer.rest();
         timer.reset();
         timer.reset();
+        shooter.outtakeAuto();
         while (timer.seconds() < 0.05) {
             transfer.outtake();
         }

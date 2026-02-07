@@ -49,8 +49,12 @@ public class Shooter {
         shooter.setPower(-0.9);
     }
     public void outtakeAuto() {
-        shooter2.setPower(-0.5);
-        shooter.setPower(-0.5);
+        shooter2.setPower(-0.536);
+        shooter.setPower(-0.536);
+    }
+    public void outtakeAuto2() {
+        shooter2.setPower(-0.555);
+        shooter.setPower(-0.555);
     }
     public void rest() {
         shooter.setPower(0);
