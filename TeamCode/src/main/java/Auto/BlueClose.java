@@ -36,7 +36,7 @@ public class BlueClose extends LinearOpMode {
                 .waitSeconds(2.4)
                 .afterTime(0, all.runAllAutoAction(hardwareMap, telemetry, false, true))
                 .strafeToLinearHeading(new Vector2d(-15, -19), Math.toRadians(90))
-                .afterTime(0.87, all.runAllAutoAction(hardwareMap, telemetry, false, false))
+                .afterTime(0.81, all.runAllAutoAction(hardwareMap, telemetry, false, false))
                 .strafeToLinearHeading(new Vector2d(-15, -50), Math.toRadians(90))
 
                 .strafeToLinearHeading(new Vector2d(-35+2, -20+7), Math.toRadians(240))
@@ -45,7 +45,7 @@ public class BlueClose extends LinearOpMode {
                 .waitSeconds(2.4)
                 .afterTime(0, all.runAllAutoAction(hardwareMap, telemetry, false, true))
                 .strafeToLinearHeading(new Vector2d(7, -27+10), Math.toRadians(90))
-                .afterTime(0.82, all.runAllAutoAction(hardwareMap, telemetry, false, false))
+                .afterTime(0.76, all.runAllAutoAction(hardwareMap, telemetry, false, false))
                 .strafeToLinearHeading(new Vector2d(7, -55+8), Math.toRadians(90))
                 .strafeToLinearHeading(new Vector2d(7, -27+10), Math.toRadians(90))
 
@@ -55,7 +55,7 @@ public class BlueClose extends LinearOpMode {
                 .waitSeconds(2.4)
                 .afterTime(0, all.runAllAutoAction(hardwareMap, telemetry, false, true))
                 .strafeToLinearHeading(new Vector2d(28, -27+20), Math.toRadians(90))
-                .afterTime(1.1, all.runAllAutoAction(hardwareMap, telemetry, false, false))
+                .afterTime(1.02, all.runAllAutoAction(hardwareMap, telemetry, false, false))
                 .strafeToLinearHeading(new Vector2d(29, -55+10), Math.toRadians(90))
 
                 .strafeToLinearHeading(new Vector2d(-33+2, -20+12), Math.toRadians(240))
