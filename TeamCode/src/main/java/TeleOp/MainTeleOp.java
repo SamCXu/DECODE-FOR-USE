@@ -81,19 +81,19 @@ public class MainTeleOp extends LinearOpMode {
                     transfer.outtake();
                 }
                 transfer.rest();
-                while (timer.seconds() < 0.5) {
+                while (timer.seconds() < 0.4) {
                     transfer.intake();
                     intake.intake();
                 }
-                while (timer.seconds() < 0.76) transfer.rest();
+                shooter.outtake2();
+                while (timer.seconds() < 0.5) transfer.rest();
                 timer.reset();
                 timer.reset();
                 while (timer.seconds() < 0.05) {
                     transfer.outtake();
                 }
                 transfer.rest();
-                shooter.outtake2();
-                while (timer.seconds() < 2.46) {
+                while (timer.seconds() < .5) {
                     transfer.intake();
                     intake.intake();
                 }
@@ -101,11 +101,14 @@ public class MainTeleOp extends LinearOpMode {
                 shooter.rest();
             }
             else if (gamepad1.dpad_up) {
+                //Charge up shooter
                 timer.reset();
                 while (timer.seconds() < 1) {
                     shooter.outtake();
                 }
-                while(timer.seconds() < 1.15) {
+                timer.reset();
+                //Push ball into shooter
+                while(timer.seconds() < 0.15) {
                     transfer.intake();
                 }
                 transfer.rest();
@@ -113,41 +116,65 @@ public class MainTeleOp extends LinearOpMode {
             }
             else if (gamepad1.dpad_left) {
                 timer.reset();
-                while (timer.seconds() < 0.5) {
-                }
-                timer.reset();
+                // Push balls back
                 while (timer.seconds() < 0.11) {
                     transfer.outtake();
                 }
                 transfer.rest();
+                //Charge up shooter
                 shooter.outtakeStronk();
                 timer.reset();
-                while (timer.seconds() < 0.5){}
-                while (timer.seconds() < 0.63) {
+                while (timer.seconds() < 1) {
+                }
+                timer.reset();
+                //Push ball 1 in to shooter
+                while (timer.seconds() < 0.13) {
                     transfer.intake();
                     intake.intake();
                 }
+                timer.reset();
+                //Let shooter charge up again
                 while (timer.seconds() < 1) transfer.rest();
                 timer.reset();
-                timer.reset();
-                while (timer.seconds() < 0.067) {
+                //Push balls back
+                while (timer.seconds() < 0.15) {
                     transfer.outtake();
                 }
                 transfer.rest();
-                while (timer.seconds() < 0.5) {
+                timer.reset();
+                //Push ball 2 in to shooter
+                while (timer.seconds() < 0.30) {
                     transfer.intake();
                     intake.intake();
                 }
-                while (timer.seconds() < 0.76) transfer.rest();
                 timer.reset();
+                //Let shooter charge up again
+                while (timer.seconds() < 1) transfer.rest();
                 timer.reset();
+                //Push balls back
                 while (timer.seconds() < 0.05) {
                     transfer.outtake();
                 }
                 transfer.rest();
-                while (timer.seconds() < 2.46) {
+                timer.reset();
+                //Push ball 3 in to shooter
+                while (timer.seconds() < 1) {
                     transfer.intake();
                     intake.intake();
+                }
+                transfer.rest();
+                shooter.rest();
+            }
+            else if (gamepad1.dpad_right) {
+                //Charge up shooter
+                timer.reset();
+                while (timer.seconds() < 1) {
+                    shooter.outtakeStronk();
+                }
+                timer.reset();
+                //Push ball into shooter
+                while(timer.seconds() < 0.15) {
+                    transfer.intake();
                 }
                 transfer.rest();
                 shooter.rest();
